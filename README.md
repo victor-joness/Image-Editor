@@ -1,4 +1,4 @@
-## Image Editor                                                                                                                                        
+## 💻 Image Editor                                                                                                                                        
 Editor de imagem criado em HTML, CSS, JS com diversas funções.                                                            
 
 ## :memo: Funcionalidades:                                                                 
@@ -13,10 +13,10 @@ Editor de imagem criado em HTML, CSS, JS com diversas funções.
 - Reset Button;                                                                          
 - Save Image Button;                                                                       
  
-## Foto do Editor                                                                                                                                                 
+## 💻 Foto do Editor                                                                                                                                                 
 -> https://imgur.com/gallery/l3XiBq6
 
-## Projeto no ar                                                          
+## 🚀 Projeto no ar                                                          
 ->                                                               
 
 ## :mortar_board: Autores
