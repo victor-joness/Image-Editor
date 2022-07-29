@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image editor</title>
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="./Css/style.css">
+    <!-- boxicons link  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="container disable">
+        <h2>Image editor</h2>
+
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+
+                    <div class="options">
+                        <button id="Brilho" class="active">Brilho</button>
+                        <button id="Saturação">Saturação</button>
+                        <button id="Inversão">Inversão</button>
+                        <button id="GrayScale">GrayScale</button>
+                    </div>
+
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brilho</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotação e Flip</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="vertical"><i class="bx bx-reflect-horizontal"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="./Img/image-placeholder.svg" alt="preview-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Resetar os filtros</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Escolher Imagem</button>
+                <button class="save-img">Salvar Imagem</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="./Js/script.js"></script>
+</body>
+</html>
