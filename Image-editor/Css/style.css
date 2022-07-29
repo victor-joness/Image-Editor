@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0; padding: 0;
+    border: none; outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s all linear;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #E3F2FD;
+}
+
+.container{
+    width: 85rem;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+/*Desabilitando o click, caso tenha a classe disable, que é a classe padrao, depois que ja tiver a img escolhida eu mudo a classe e portanto posso clicka*/
+.container.disable :where(.editor-panel, .reset-filter, .save-img){
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.container h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.container .wrapper{
+    display: flex;
+    margin: 2rem 0;
+    min-height: 33rem;
+}
+
+.wrapper .editor-panel{
+    width: 28rem;
+    border: .1rem solid #ccc;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+}
+
+.editor-panel .title{
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.editor-panel .options, .controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.editor-panel button{
+    height: 4rem;
+    font-size: 1.4rem;
+    color: #6c757d;
+    margin-bottom: .8rem;
+    border: .1rem solid #aaa;
+    background: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.editor-panel button:hover{
+    background: #f5f5f5;
+}
+
+.editor-panel .filter  button{
+    width: calc(100% / 2 - .3rem);
+}
+
+.filter button.active{
+    color: #fff;
+    background: #5372f0;
+    border-color: #5372f0;
+}
+
+.filter .slider{
+    margin-top: 1.2rem;
+}
+
+.filter .slider .filter-info{
+    display: flex;
+    color: #464646;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+
+.slider .name{
+    font-size: 1.8rem;
+}
+
+.filter .slider input{
+    width: 100%;
+    height: .5rem;
+    accent-color: #5372f0;
+}
+
+.editor-panel .rotate{
+    margin-top: 1.7rem;
+
+}
+
+.editor-panel .rotate button{
+    width: calc(100% / 2 - .3rem);
+}
+
+.rotate button:nth-child(3), .rotate button:nth-child(4){
+    font-size: 1.8rem;
+}
+
+.wrapper .preview-img{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    overflow: hidden;
+}
+
+.preview-img img{
+    max-width: 49rem;
+    max-height: 33.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.controls button{
+    padding: 1.1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: #fff;
+    color: #fff;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    margin-right: 1.7rem;
+}
+
+.controls .reset-filter{
+    color: #6c757d;
+    border: .1rem solid #6c757d;
+}
+
+.controls .choose-img{
+    border: .1rem solid #6c757d;
+    background: #6c757d;
+}
+
+.controls .save-img{
+    margin-left: .5rem;
+    border: .1rem solid #6c757d;
+    background: #5372f0;
+}
+
+@media screen and (max-width:760px){
+    .container{
+        padding: 2.5rem;
+    }
+
+    .container .wrapper{
+        flex-wrap: wrap-reverse;
+    }
+
+    .wrapper .editor-panel{
+        width: 100%;
+    }
+
+    .wrapper .preview-img{
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+
+    .controls .reset-filter{
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .controls button{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .controls .row{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .controls .row .save-img{
+        margin-left: 0px;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .controls button{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .controls .row{
+        width: 100%;
+    }
+
+    .controls .row .save-img{
+        margin-left: 0px;
+    }
+}
